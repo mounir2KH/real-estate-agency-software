@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="337.0" prefWidth="612.0" style="-fx-background-color: #15AABC;">
+         <children>
+            <Button layoutX="522.0" layoutY="11.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="76.0" style="-fx-background-color: #0a7a95;" text="Sign Up" textFill="WHITE">
+               <font>
+                  <Font name="Roboto" size="15.0" />
+               </font>
+               <effect>
+                  <ColorAdjust />
+               </effect>
+            </Button>
+            <Text fill="WHITE" layoutX="428.0" layoutY="34.0" opacity="0.72" strokeType="OUTSIDE" strokeWidth="0.0" text="Not a member?">
+               <font>
+                  <Font name="Roboto" size="12.0" />
+               </font>
+               <effect>
+                  <ColorAdjust brightness="1.0" contrast="-0.55" hue="-0.05" saturation="-0.07" />
+               </effect>
+            </Text>
+            <TextField layoutX="178.0" layoutY="169.0" prefHeight="26.0" prefWidth="237.0" promptText="Username">
+               <effect>
+                  <ColorAdjust brightness="0.52" />
+               </effect>
+               <font>
+                  <Font name="Segoe UI" size="16.0" />
+               </font>
+            </TextField>
+            <TextField accessibleRole="PASSWORD_FIELD" cache="true" layoutX="178.0" layoutY="207.0" prefHeight="26.0" prefWidth="237.0" promptText="Password">
+               <effect>
+                  <ColorAdjust brightness="0.52" />
+               </effect>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <ImageView fitHeight="26.0" fitWidth="27.0" layoutX="214.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="33.0" fitWidth="34.0" layoutX="24.0" layoutY="14.0">
+               <image>
+                  <Image url="@photos/icons8-back-64.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="241.0" layoutY="257.0" mnemonicParsing="false" mouseTransparent="true" prefHeight="39.0" prefWidth="112.0" style="-fx-background-color: #0a7a95; -fx-border-radius: 100;" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="Roboto" size="15.0" />
+               </font>
+               <effect>
+                  <ColorAdjust />
+               </effect>
+            </Button>
+            <Group layoutX="171.0" layoutY="62.0" />
+            <RadioButton layoutX="211.0" layoutY="127.0" mnemonicParsing="false" text="User">
+               <toggleGroup>
+                  <ToggleGroup fx:id="user" />
+               </toggleGroup>
+               <effect>
+                  <ColorAdjust />
+               </effect>
+            </RadioButton>
+            <RadioButton layoutX="308.0" layoutY="127.0" mnemonicParsing="false" text="Admin" toggleGroup="$user">
+               <effect>
+                  <ColorAdjust />
+               </effect>
+            </RadioButton>
+            <ImageView fitHeight="65.0" fitWidth="64.0" layoutX="252.0" layoutY="30.0">
+               <image>
+                  <Image url="@photos/Groupe%201.png" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="140.0" layoutY="171.0">
+               <image>
+                  <Image url="@photos/icons8-male-user-24.png" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="1.0" />
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="140.0" layoutY="209.0">
+               <image>
+                  <Image url="@photos/padlock(2).png" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="1.0" />
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="140.0" layoutY="209.0">
+               <image>
+                  <Image url="@photos/padlock(2).png" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="1.0" />
+               </effect>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
