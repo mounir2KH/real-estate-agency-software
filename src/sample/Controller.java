@@ -35,7 +35,7 @@ public class Controller  {
         System.out.println("You clicked me");
         label.setText("Hello word");
     }
-
+     @FXML
     //Transition to admin mode in the login page
     private void openAdminTab(MouseEvent event) {
         //Translation animation to slide labels left and right
