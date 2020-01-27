@@ -1,21 +1,20 @@
-package sample.Controller;
+package sample;
+import java.net.URL ;
+import java.util.ResourceBundle ;
 
 import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent ;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.input.MouseEvent ;
-import javafx.stage.Stage;
 import javafx.util.Duration;
 
-import java.io.IOException;
-
-public class LoginController {
+public class Controller  {
     private Label label;
     @FXML
     private Label labelAdmin ;
@@ -36,7 +35,7 @@ public class LoginController {
         System.out.println("You clicked me");
         label.setText("Hello word");
     }
-    @FXML
+
     //Transition to admin mode in the login page
     private void openAdminTab(MouseEvent event) {
         //Translation animation to slide labels left and right
@@ -58,6 +57,4 @@ public class LoginController {
         //set selected tab as user
         tabPanelogin.getSelectionModel().select(tabUser);
     }
-
-
 }
