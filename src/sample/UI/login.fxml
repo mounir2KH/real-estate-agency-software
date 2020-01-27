@@ -18,7 +18,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<GridPane alignment="center" hgap="10" stylesheets="@Style.css" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<GridPane alignment="center" hgap="10" stylesheets="@../Style.css" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.LoginController">
    <columnConstraints>
       <ColumnConstraints />
    </columnConstraints>
@@ -93,7 +93,7 @@
             </AnchorPane>
             <ImageView fitHeight="132.0" fitWidth="111.0" layoutX="99.0" layoutY="83.0">
                <image>
-                  <Image url="@photos/Groupe%201.png" />
+                  <Image url="@../photos/Groupe%201.png" />
                </image>
             </ImageView>
          </children></AnchorPane>
