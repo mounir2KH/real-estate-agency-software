@@ -6,7 +6,6 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.image.Image?>
@@ -17,8 +16,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<GridPane alignment="center" hgap="10" stylesheets="@../Style.css" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.LoginController">
+<GridPane alignment="center" hgap="10" stylesheets="@Style.css" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="poo_graphic.Controller">
    <columnConstraints>
       <ColumnConstraints />
    </columnConstraints>
@@ -35,42 +35,46 @@
                <children>
                   <TabPane fx:id="tabPanelogin" layoutX="9.0" layoutY="39.0" prefHeight="200.0" prefWidth="224.0" tabClosingPolicy="UNAVAILABLE">
                     <tabs>
-                      <Tab fx:id="tabUser" text="User">
-                        <content>
-                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                                 <children>
-                                    <TextField layoutX="38.0" layoutY="45.0" promptText="USERNAME">
-                                       <effect>
-                                          <InnerShadow color="#64ffda" />
-                                       </effect>
-                                    </TextField>
-                                    <Button layoutX="72.0" layoutY="104.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="84.0" style="-fx-background-color: #134E5E; -fx-background-radius: 25;" text="Login" textFill="WHITE">
-                                       <font>
-                                          <Font size="15.0" />
-                                       </font>
-                                       <effect>
-                                          <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0" />
-                                       </effect></Button>
-                                 </children>
-                              </AnchorPane>
-                        </content>
-                      </Tab>
                       <Tab fx:id="tabAdmin" text="Admin">
                         <content>
                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
-                                    <PasswordField layoutX="38.0" layoutY="45.0" promptText="PASSWORD">
+                                    <PasswordField fx:id="passwordField" layoutX="40.0" layoutY="55.0" promptText="PASSWORD">
                                        <effect>
                                           <InnerShadow color="#64ffda" />
                                        </effect>
                                     </PasswordField>
-                                    <Button layoutX="72.0" layoutY="104.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="84.0" style="-fx-background-color: #134E5E; -fx-background-radius: 25; -fx-text-fill: #FFFFFF;" text="Login" textFill="WHITE">
+                                    <Button fx:id="loginAsAdmin" layoutX="72.0" layoutY="104.0" mnemonicParsing="false" onMouseClicked="#loginAsAdmin" prefHeight="32.0" prefWidth="84.0" style="-fx-background-color: #134E5E; -fx-background-radius: 25; -fx-text-fill: #FFFFFF;" text="Login" textFill="WHITE">
                                        <font>
                                           <Font size="15.0" />
                                        </font>
                                        <effect>
                                           <DropShadow height="10.0" radius="4.5" width="10.0" />
                                        </effect></Button>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab fx:id="tabUser" text="User">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Text fill="#3f3d56" layoutX="40.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME" wrappingWidth="149.0">
+                                       <font>
+                                          <Font name="Segoe UI" size="30.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="login" layoutX="72.0" layoutY="104.0" mnemonicParsing="false" onMouseClicked="#loginAsUser" prefHeight="32.0" prefWidth="84.0" style="-fx-background-color: #134E5E; -fx-background-radius: 25;" text="Login" textFill="WHITE">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0" />
+                                       </effect>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
                                  </children>
                               </AnchorPane>
                         </content>
@@ -86,14 +90,15 @@
                         <Label fx:id="labelUser" alignment="CENTER" layoutX="100.0" onMouseClicked="#openUserTab" prefHeight="35.0" prefWidth="100.0" style="-fx-background-radius: 8;" text="User">
                            <cursor>
                               <Cursor fx:constant="HAND" />
-                           </cursor></Label>
+                           </cursor>
+                        </Label>
                         <Label fx:id="labelStatus" alignment="CENTER" contentDisplay="CENTER" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #134E5E; -fx-background-radius: 12;" text="Admin" textFill="WHITE" />
                      </children></Pane>
                </children>
             </AnchorPane>
             <ImageView fitHeight="132.0" fitWidth="111.0" layoutX="99.0" layoutY="83.0">
                <image>
-                  <Image url="@../photos/Groupe%201.png" />
+                  <Image url="@photos/Groupe 1.png" />
                </image>
             </ImageView>
          </children></AnchorPane>
