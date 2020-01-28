@@ -4,6 +4,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import poo_graphic.Models.Agence;
@@ -20,6 +21,7 @@ public class MessageTile extends ListCell<Agence.Message> {
         super.updateItem(message, empty);
         if (message != null) {
             Bien bien = message.getBien();
+            Text messageText = new Text("Message : " + message.getMessage().getValue());
             Text price = new Text(Double.toString(bien.calculerPrix()) + "$");
             price.setTextAlignment(TextAlignment.RIGHT);
             String typeString = "Terrain";
@@ -36,9 +38,8 @@ public class MessageTile extends ListCell<Agence.Message> {
 
             Label child2 = new Label(bien.getTypeTransaction().toString());
             VBox child = new VBox(child1, child2);
-            Label wilaya = new Label(bien.getWilaya().getNomWilaya()) ;
 
-            VBox bienTile = new VBox(child, wilaya);
+            VBox bienTile = new VBox(messageText, child);
             bienTile.setSpacing(10);
             setGraphic(bienTile);
         } else {

@@ -84,19 +84,16 @@ public class Agence {
         this.biens.set(i, bien);
     }
 
-    public Bien supprimerBien(int i) {
+    public void supprimerBien(Bien b) {
         if (!isAuth)
-            return null;
-        if (i < 0 || i >= this.biens.size()) {
-            System.err.println("L'indice donnee est hors la taille de la liste");
-            return null;
-        }
-        Bien bien = this.biens.get(i);
-        int indice = this.proprietaires.indexOf(bien.getProprietaire());
+            return;
+        if (!this.biens.contains(b))
+            return;
+        int indice = this.proprietaires.indexOf(b.getProprietaire());
 
         if (indice != -1) {
             Proprietaire proprietaire = this.proprietaires.get(indice);
-            int indiceBien = proprietaire.getBiens().indexOf(bien);
+            int indiceBien = proprietaire.getBiens().indexOf(b);
             if (indiceBien != -1) {
                 proprietaire.getBiens().remove(indiceBien);
             }
@@ -105,7 +102,7 @@ public class Agence {
             }
         }
 
-        return this.biens.remove(i);
+        this.biens.remove(b);
     }
 
 //    public void afficherBiens() {
@@ -181,14 +178,13 @@ public class Agence {
 //        }
 //    }
 
-    public void archiver(int i) {
+    public void archiver(Bien b) {
         if (!isAuth)
             return;
-        if (i < 0 || i >= this.biens.size()) {
-            System.err.println("L'indice donnee est hors la taille de la liste");
+        if (!this.biens.contains(b))
             return;
-        }
-        this.archives.add(this.biens.remove(i));
+        this.biens.remove(b);
+        this.archives.add(b);
     }
 
 //    public void afficherBiensArchives() {

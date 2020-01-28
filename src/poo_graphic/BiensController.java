@@ -28,11 +28,23 @@ public class BiensController extends ListBiensFiltreController{
     }
     @FXML
     private void archiver(MouseEvent event) {
+        Bien bien = list_biens.getSelectionModel().getSelectedItem();
+        if (bien == null) {
+            erreurSendMessage.setText("veuillez selectionner un bien");
+            return;
+        }
 
+        immoEsi.archiver(bien);
     }
     @FXML
     private void supprimer(MouseEvent event) {
+        Bien bien = list_biens.getSelectionModel().getSelectedItem();
+        if (bien == null) {
+            erreurSendMessage.setText("veuillez selectionner un bien");
+            return;
+        }
 
+        immoEsi.supprimerBien(bien);
     }
 }
 

@@ -76,7 +76,6 @@ public class AdminPageController {
     private void afficherArchives(MouseEvent event) {
         if (!selectedView[1]) {
             resetView();
-            immoEsi.archiver(0);
             try {
                 FXMLLoader loader = new FXMLLoader();
                 loader.setLocation(Main.class.getResource("Archives.fxml"));

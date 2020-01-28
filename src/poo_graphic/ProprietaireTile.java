@@ -18,27 +18,14 @@ public class ProprietaireTile extends ListCell<Proprietaire> {
     @Override
     public void updateItem(Proprietaire proprietaire, boolean empty) {
         super.updateItem(proprietaire, empty);
-        if (proprietaire != null && proprietaire.getBiens().size() > 0) {
-            Bien bien = proprietaire.getBiens().get(0);
-            Text price = new Text(Double.toString(bien.calculerPrix()) + "$");
-            price.setTextAlignment(TextAlignment.RIGHT);
+        if (proprietaire != null) {
             String typeString = "Terrain";
-            if (bien instanceof Maison) {
-                typeString = "Maison";
-            } else if (bien instanceof Appartement) {
-                typeString = "Appartement";
-            }
-            Text type = new Text(typeString);
-            type.setTextAlignment(TextAlignment.LEFT);
-            BorderPane child1 = new BorderPane();
-            child1.setLeft(type);
-            child1.setRight(price);
+            Text nom = new Text("Nom : " + proprietaire.getNom());
+            Text prenom = new Text("Prenom : " + proprietaire.getPrenom());
+            Text addresse = new Text("Addresse : " + proprietaire.getAddresse());
+            Text tel = new Text("Tel : " + proprietaire.getTel());
 
-            Label child2 = new Label(bien.getTypeTransaction().toString());
-            VBox child = new VBox(child1, child2);
-            Label wilaya = new Label(bien.getWilaya().getNomWilaya()) ;
-
-            VBox bienTile = new VBox(child, wilaya);
+            VBox bienTile = new VBox(nom, prenom, addresse, tel);
             bienTile.setSpacing(10);
             setGraphic(bienTile);
         } else {
