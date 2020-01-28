@@ -2,19 +2,12 @@
 
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.ColorAdjust?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -43,97 +36,16 @@
                         <Font size="30.0" />
                     </font>
                 </Text>
+            <HBox layoutX="195.0" layoutY="101.0" prefHeight="42.0" prefWidth="492.0" style="-fx-background-color: #3F3D56; -fx-background-radius: 0;">
+               <children>
+                  <Button mnemonicParsing="false" onMouseClicked="#afficherBiens" prefHeight="44.0" prefWidth="123.0" style="-fx-background-color: Transparent; -fx-border-color: white;" text="Biens" textFill="WHITE" />
+                  <Button mnemonicParsing="false" onMouseClicked="#afficherArchives" prefHeight="44.0" prefWidth="123.0" style="-fx-background-color: Transparent; -fx-border-color: white;" text="Archive" textFill="WHITE" />
+                  <Button mnemonicParsing="false" onMouseClicked="#afficherPropritaires" prefHeight="44.0" prefWidth="123.0" style="-fx-background-color: Transparent; -fx-border-color: white;" text="Proprietaires" textFill="WHITE" />
+                  <Button mnemonicParsing="false" onMouseClicked="#afficherMessages" prefHeight="44.0" prefWidth="123.0" style="-fx-background-color: Transparent; -fx-border-color: white;" text="Messages" textFill="WHITE" />
+               </children>
+            </HBox>
             </children></Pane>
-        <AnchorPane layoutY="143.0" prefHeight="489.0" prefWidth="217.0" style="-fx-background-color: #3F3D56;">
-            <children>
-                <TextField fx:id="prixMin" layoutX="14.0" layoutY="90.0" prefHeight="25.0" prefWidth="76.0" promptText="Prix Min" />
-                <TextField fx:id="prixMax" layoutX="119.0" layoutY="90.0" prefHeight="25.0" prefWidth="76.0" promptText="Prix Max" />
-                <TextField fx:id="superficieMin" layoutX="14.0" layoutY="135.0" prefHeight="25.0" prefWidth="97.0" promptText="Superficie Min" />
-                <ChoiceBox fx:id="type_transaction" layoutX="78.0" layoutY="182.0" prefHeight="25.0" prefWidth="117.0" />
-                <ChoiceBox fx:id="typeBien" layoutX="78.0" layoutY="220.0" prefHeight="25.0" prefWidth="117.0" />
-                <ChoiceBox fx:id="wilaya" layoutX="77.0" layoutY="262.0" prefHeight="25.0" prefWidth="117.0" />
-                <TextField fx:id="nbrPiecesMin" layoutX="15.0" layoutY="308.0" prefHeight="25.0" prefWidth="117.0" promptText="nombre pieces Min" />
-                <Button layoutX="131.0" layoutY="358.0" mnemonicParsing="false" onMouseClicked="#filtre" prefHeight="25.0" prefWidth="62.0" style="-fx-background-color: #02ac96; -fx-background-radius: 10;" text="Filtrer" textFill="WHITE">
-                    <effect>
-                        <ColorAdjust />
-                    </effect>
-                    <cursor>
-                        <Cursor fx:constant="HAND" />
-                    </cursor>
-                </Button>
-                <ImageView fitHeight="17.0" fitWidth="17.0" layoutX="14.0" layoutY="18.0">
-                    <image>
-                        <Image url="@photos/filter.png" />
-                    </image>
-                </ImageView>
-                <Text fill="WHITE" layoutX="44.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FILTRE">
-                    <font>
-                        <Font name="Segoe UI" size="19.0" />
-                    </font>
-                    <effect>
-                        <ColorAdjust brightness="0.94" />
-                    </effect>
-                </Text>
-                <Button layoutX="32.0" layoutY="357.0" mnemonicParsing="false" onMouseClicked="#reset" prefHeight="25.0" prefWidth="62.0" style="-fx-background-color: #3F3D56; -fx-background-radius: 10;" text="Reset" textFill="WHITE">
-                    <effect>
-                        <ColorAdjust />
-                    </effect>
-                    <cursor>
-                        <Cursor fx:constant="HAND" />
-                    </cursor>
-                </Button>
-                <Text fill="WHITE" layoutX="7.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Transaction" />
-                <Text fill="WHITE" layoutX="7.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type du bien" />
-                <Text fill="WHITE" layoutX="12.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wilaya" />
-            </children></AnchorPane>
-        <Label contentDisplay="TOP" layoutX="597.0" layoutY="156.0" text="Details du bien : " textFill="#9e9696" />
-        <GridPane layoutX="616.0" layoutY="184.0" prefHeight="387.0" prefWidth="308.0">
-            <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="143.33331298828125" minWidth="10.0" prefWidth="99.33331298828125" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="270.6666463216146" minWidth="10.0" prefWidth="212.00002034505212" />
-            </columnConstraints>
-            <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            </rowConstraints>
-            <children>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="adresse:" />
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="description:" GridPane.rowIndex="1" />
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="prix finale:" GridPane.rowIndex="2" />
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="transaction :" GridPane.rowIndex="3" />
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="negociable:" GridPane.rowIndex="4" />
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="superficie:" GridPane.rowIndex="5" />
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="date:" GridPane.rowIndex="6" />
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="proprietaire:" GridPane.rowIndex="7" />
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="nombre de pieces:" GridPane.rowIndex="8" />
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="meublé:" GridPane.rowIndex="9" />
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="nombre d'etage:" GridPane.rowIndex="10" />
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="duplexe:" GridPane.rowIndex="11" />
-                <Label fx:id="addresse" text="Label" GridPane.columnIndex="1" />
-                <Label fx:id="description" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                <Label fx:id="prix" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                <Label fx:id="typeTransaction" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                <Label fx:id="negociable" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                <Label fx:id="superficie" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                <Label fx:id="date" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                <Label fx:id="proprietaire" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                <Label fx:id="nbrPieces" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-                <Label fx:id="meuble" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="9" />
-                <Label fx:id="nbrEtage" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="10" />
-                <Label fx:id="duplexe" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="11" />
-            </children>
-        </GridPane>
         <Text layoutX="10.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" />
-        <ListView fx:id="list_biens" layoutX="218.0" layoutY="143.0" onMouseClicked="#reset" prefHeight="489.0" prefWidth="378.0" />
+      <AnchorPane fx:id="view" layoutY="143.0" prefHeight="488.0" prefWidth="1076.0" />
     </children>
 </AnchorPane>

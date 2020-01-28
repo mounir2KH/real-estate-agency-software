@@ -1,35 +1,25 @@
 package poo_graphic;
 
-import javafx.event.EventHandler;
-import javafx.fxml.FXMLLoader;
-import javafx.geometry.Orientation;
-import javafx.geometry.Pos;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.*;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
-import javafx.scene.text.TextFlow;
-import javafx.stage.Stage;
+import poo_graphic.Models.Agence;
 import poo_graphic.Models.Appartement;
 import poo_graphic.Models.Bien;
 import poo_graphic.Models.Maison;
 
-import java.io.IOException;
+public class MessageTile extends ListCell<Agence.Message> {
 
-public class BienTile extends ListCell<Bien> {
-
-    public BienTile() {
+    public MessageTile() {
     }
     @Override
-    public void updateItem(Bien bien, boolean empty) {
-        super.updateItem(bien, empty);
-        if (bien != null) {
+    public void updateItem(Agence.Message message, boolean empty) {
+        super.updateItem(message, empty);
+        if (message != null) {
+            Bien bien = message.getBien();
             Text price = new Text(Double.toString(bien.calculerPrix()) + "$");
             price.setTextAlignment(TextAlignment.RIGHT);
             String typeString = "Terrain";

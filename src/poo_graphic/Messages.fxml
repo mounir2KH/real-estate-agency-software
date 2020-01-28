@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="492.0" prefWidth="1073.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="poo_graphic.MessagesController">
+   <children>
+      <Label contentDisplay="TOP" layoutX="607.0" layoutY="14.0" text="Details du bien : " textFill="#9e9696">
+         <font>
+            <Font size="17.0" />
+         </font></Label>
+      <GridPane layoutX="613.0" layoutY="46.0" prefHeight="377.0" prefWidth="379.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="143.33331298828125" minWidth="10.0" prefWidth="142.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="270.6666463216146" minWidth="10.0" prefWidth="166.66666666666663" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="adresse:" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="description:" GridPane.rowIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="prix finale:" GridPane.rowIndex="2" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="transaction :" GridPane.rowIndex="3" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="negociable:" GridPane.rowIndex="4" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="superficie:" GridPane.rowIndex="5" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="date:" GridPane.rowIndex="6" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="proprietaire:" GridPane.rowIndex="7" />
+            <Text fx:id="piece_facade" strokeType="OUTSIDE" strokeWidth="0.0" text="nombre de pieces:" GridPane.rowIndex="8" />
+            <Text fx:id="meuble_statut" strokeType="OUTSIDE" strokeWidth="0.0" text="meublé:" GridPane.rowIndex="9" />
+            <Text fx:id="etage" strokeType="OUTSIDE" strokeWidth="0.0" text="nombre d'etage:" GridPane.rowIndex="10" />
+            <Text fx:id="booleen" strokeType="OUTSIDE" strokeWidth="0.0" text="duplexe:" GridPane.rowIndex="11" />
+            <Label fx:id="addresse" text="..." GridPane.columnIndex="1" />
+            <Label fx:id="description" text="..." GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="prix" text="..." GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="typeTransaction" text="..." GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="negociable" text="..." GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label fx:id="superficie" text="..." GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label fx:id="date" text="..." GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label fx:id="proprietaire" text="..." GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Label fx:id="nbrPieces" text="..." GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <Label fx:id="meuble" text="..." GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <Label fx:id="nbrEtage" text="..." GridPane.columnIndex="1" GridPane.rowIndex="10" />
+            <Label fx:id="booleenValue" text="..." GridPane.columnIndex="1" GridPane.rowIndex="11" />
+         </children>
+      </GridPane>
+      <Text layoutX="10.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <ListView fx:id="list_messages" prefHeight="489.0" prefWidth="559.0" />
+      <Label fx:id="erreurSendMessage" layoutX="653.0" layoutY="465.0" textFill="#ee1010" />
+   </children>
+</AnchorPane>

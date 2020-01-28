@@ -44,8 +44,16 @@ public class Agence {
         return this.biens.get(i);
     }
 
+    public ObservableList<Proprietaire> getProprietaires() {
+        return proprietaires;
+    }
+
     public ObservableList<Bien> getBiens() {
         return biens;
+    }
+
+    public ObservableList<Bien> getArchives() {
+        return archives;
     }
 
     public void ajouterBien(Bien bien) {
@@ -260,7 +268,7 @@ public class Agence {
 
 
 
-    class Message {
+    public class Message {
         private Bien bien;
         private StringProperty message;
 
@@ -279,6 +287,10 @@ public class Agence {
     }
 
     ObservableList<Message> messages = FXCollections.observableArrayList();
+
+    public ObservableList<Message> getMessages() {
+        return messages;
+    }
 
     public void envoyerMessage(Bien bien, String message) {
         messages.add(new Message(bien, message));

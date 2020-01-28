@@ -7,44 +7,18 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.ColorAdjust?>
-<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="630.0" prefWidth="1073.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="poo_graphic.UserPageController">
+<AnchorPane prefHeight="492.0" prefWidth="1073.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="poo_graphic.BiensController">
    <children>
-      <Pane layoutX="-3.0" prefHeight="143.0" prefWidth="1079.0" style="-fx-background-color: #02ac96;">
-         <children>
-            <Button fx:id="log" layoutX="954.0" layoutY="41.0" mnemonicParsing="false" onMouseClicked="#logOut" prefHeight="40.0" prefWidth="76.0" style="-fx-background-color: #02ac96; -fx-background-radius: 17;" text="Log out" textFill="WHITE">
-               <font>
-                  <Font size="14.0" />
-               </font>
-               <effect>
-                  <DropShadow height="18.04" radius="7.035" width="12.1" />
-               </effect>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <ImageView fitHeight="93.0" fitWidth="101.0" layoutX="29.0" layoutY="14.0">
-               <image>
-                  <Image url="@photos/Groupe%201.png" />
-               </image>
-            </ImageView>
-            <Text fill="WHITE" layoutX="188.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenu a IMMO ESI" textAlignment="CENTER" wrappingWidth="308.0">
-               <font>
-                  <Font size="30.0" />
-               </font>
-            </Text>
-         </children></Pane>
-      <AnchorPane layoutY="143.0" prefHeight="489.0" prefWidth="217.0" style="-fx-background-color: #3F3D56;">
+      <AnchorPane layoutY="2.0" prefHeight="489.0" prefWidth="217.0" style="-fx-background-color: #3F3D56;">
          <children>
             <TextField fx:id="prixMin" layoutX="14.0" layoutY="90.0" prefHeight="25.0" prefWidth="76.0" promptText="Prix Min" />
             <TextField fx:id="prixMax" layoutX="119.0" layoutY="90.0" prefHeight="25.0" prefWidth="76.0" promptText="Prix Max" />
@@ -87,11 +61,11 @@
             <Text fill="WHITE" layoutX="12.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wilaya" />
             <Label fx:id="filtreErreur" layoutX="16.0" layoutY="60.0" textFill="#ff5555" />
          </children></AnchorPane>
-      <Label contentDisplay="TOP" layoutX="670.0" layoutY="158.0" text="Details du bien : " textFill="#9e9696">
+      <Label contentDisplay="TOP" layoutX="667.0" layoutY="14.0" text="Details du bien : " textFill="#9e9696">
          <font>
             <Font size="17.0" />
          </font></Label>
-      <GridPane layoutX="678.0" layoutY="184.0" prefHeight="377.0" prefWidth="379.0">
+      <GridPane layoutX="678.0" layoutY="46.0" prefHeight="377.0" prefWidth="379.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="143.33331298828125" minWidth="10.0" prefWidth="142.0" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="270.6666463216146" minWidth="10.0" prefWidth="166.66666666666663" />
@@ -138,18 +112,39 @@
          </children>
       </GridPane>
       <Text layoutX="10.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" />
-      <ListView fx:id="list_biens" layoutX="224.0" layoutY="143.0" onMouseClicked="#reset" prefHeight="489.0" prefWidth="425.0" />
-      <Button fx:id="contact" layoutX="986.0" layoutY="578.0" mnemonicParsing="false" onMouseClicked="#envoyerMessage" prefHeight="40.0" prefWidth="76.0" style="-fx-background-color: #02ac96; -fx-background-radius: 17;" text="contact" textFill="WHITE">
-         <font>
-            <Font size="14.0" />
-         </font>
+      <ListView fx:id="list_biens" layoutX="217.0" layoutY="2.0" prefHeight="489.0" prefWidth="425.0" />
+      <Button layoutX="964.0" layoutY="440.0" mnemonicParsing="false" onMouseClicked="#supprimer" prefHeight="25.0" prefWidth="87.0" style="-fx-background-color: #02ac96; -fx-background-radius: 10;" text="Supprimer" textFill="WHITE">
          <effect>
-            <DropShadow height="18.04" radius="7.035" width="12.1" />
+            <ColorAdjust />
          </effect>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Label fx:id="erreurSendMessage" layoutX="678.0" layoutY="589.0" prefHeight="17.0" prefWidth="159.0" textFill="#ff1818" />
+      <Button layoutX="860.0" layoutY="440.0" mnemonicParsing="false" onMouseClicked="#archiver" prefHeight="25.0" prefWidth="87.0" style="-fx-background-color: #02ac96; -fx-background-radius: 10;" text="Archiver" textFill="WHITE">
+         <effect>
+            <ColorAdjust />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="757.0" layoutY="440.0" mnemonicParsing="false" onMouseClicked="#modifier" prefHeight="25.0" prefWidth="87.0" style="-fx-background-color: #02ac96; -fx-background-radius: 10;" text="Modifier" textFill="WHITE">
+         <effect>
+            <ColorAdjust />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="640.0" layoutY="440.0" mnemonicParsing="false" onMouseClicked="#ajouter" prefHeight="25.0" prefWidth="87.0" style="-fx-background-color: #02ac96; -fx-background-radius: 10;" text="Ajouter" textFill="WHITE">
+         <effect>
+            <ColorAdjust />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="erreurSendMessage" layoutX="653.0" layoutY="465.0" textFill="#ee1010" />
    </children>
 </AnchorPane>

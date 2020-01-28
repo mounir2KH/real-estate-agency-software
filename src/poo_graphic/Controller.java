@@ -24,7 +24,7 @@ public class Controller {
     @FXML
     private Label labelUser;
     @FXML
-    private Label labelStatus;
+    private Label labelStatus, errorMessage;
     @FXML
     private TabPane tabPanelogin;
     @FXML
@@ -87,6 +87,8 @@ public class Controller {
 
             // Show the scene containing the root layout.
             Scene scene = new Scene(rootLayout);
+            stage.setX(75);
+            stage.setY(10);
             stage.setScene(scene);
             stage.show();
 
@@ -114,6 +116,8 @@ public class Controller {
                 // Show the scene containing the root layout.
                 Scene scene = new Scene(rootLayout);
                 stage.setScene(scene);
+                stage.setX(75);
+                stage.setY(10);
                 stage.show();
 
             } catch (IOException e) {
@@ -121,7 +125,7 @@ public class Controller {
             }
 
         } else {
-            //TODO : show error message
+            errorMessage.setText("Mot de passe erroné");
         }
     }
 

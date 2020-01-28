@@ -1,8 +1,11 @@
 package poo_graphic;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
 import poo_graphic.Models.Agence;
 import poo_graphic.Models.Bien;
@@ -16,6 +19,8 @@ public class SendMessageController {
 
     @FXML
     private TextArea message;
+    @FXML
+    private Label messageSuccee;
 
     public void setImmoEsi(Agence immoEsi) {
         this.immoEsi = immoEsi;
@@ -26,7 +31,15 @@ public class SendMessageController {
 
     @FXML
     private void send(MouseEvent event) {
-        immoEsi.envoyerMessage(bien, message.getText());
+        String msg = message.getText();
+        if (msg.equals("")) {
+            messageSuccee.setText("Veuillez introduire le message");
+            messageSuccee.setTextFill(Color.web("#e51616"));
+        } else {
+            immoEsi.envoyerMessage(bien, message.getText());
+            messageSuccee.setText("Votre message a été envoyé");
+            messageSuccee.setTextFill(Color.web("#40cda9"));
+        }
     }
 
     @FXML

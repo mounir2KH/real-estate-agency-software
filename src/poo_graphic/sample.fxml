@@ -39,7 +39,7 @@
                         <content>
                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
-                                    <PasswordField fx:id="passwordField" layoutX="40.0" layoutY="55.0" promptText="PASSWORD">
+                                    <PasswordField fx:id="passwordField" layoutX="40.0" layoutY="51.0" promptText="PASSWORD">
                                        <effect>
                                           <InnerShadow color="#64ffda" />
                                        </effect>
@@ -51,6 +51,7 @@
                                        <effect>
                                           <DropShadow height="10.0" radius="4.5" width="10.0" />
                                        </effect></Button>
+                                    <Label fx:id="errorMessage" layoutX="40.0" layoutY="78.0" textFill="#f51717" />
                                  </children>
                               </AnchorPane>
                         </content>

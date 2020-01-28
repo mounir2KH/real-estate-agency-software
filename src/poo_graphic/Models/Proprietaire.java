@@ -64,8 +64,8 @@ public class Proprietaire {
 //        }
 //    }
 
-    @Override
-    public boolean equals(Object obj) {
+
+    public boolean equals(Proprietaire obj) {
         if (!((Proprietaire) obj).getAddresse().equals(this.addresse.getValue()))
             return false;
         if (!((Proprietaire) obj).getAdrMail().equals(this.adrMail.getValue()))
