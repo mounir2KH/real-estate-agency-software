@@ -20,7 +20,25 @@ public class BiensController extends ListBiensFiltreController{
 
     @FXML
     private void ajouter(MouseEvent event) {
-        System.out.println("ajouter");
+        Stage stage = new Stage();
+        Parent root;
+        stage.setTitle("User");
+        try {
+            // Load root layout from fxml file.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(Main.class.getResource("ajouterBien.fxml"));
+            AnchorPane rootLayout = (AnchorPane) loader.load();
+//            Controller controller = loader.getController();
+//            controller.setImmoEsi(immoEsi);
+
+            // Show the scene containing the root layout.
+            Scene scene = new Scene(rootLayout);
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
     @FXML
     private void modifier(MouseEvent event) {
