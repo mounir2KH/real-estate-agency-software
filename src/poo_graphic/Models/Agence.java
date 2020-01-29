@@ -5,6 +5,7 @@ import javafx.beans.property.StringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.TreeSet;
@@ -30,6 +31,7 @@ public class Agence {
             return false;
         }
     }
+
     public void deconnecter() {
         isAuth = false;
     }
@@ -72,16 +74,6 @@ public class Agence {
 
         this.biens.add(bien);
         this.biens.sort(Bien::compareTo);
-    }
-
-    public void modifierBien(int i, Bien bien) {
-        if (!isAuth)
-            return;
-        if (i < 0 || i >= this.biens.size()) {
-            System.err.println("L'indice donnee est hors la taille de la liste");
-            return;
-        }
-        this.biens.set(i, bien);
     }
 
     public void supprimerBien(Bien b) {

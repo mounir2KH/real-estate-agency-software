@@ -15,6 +15,7 @@ import poo_graphic.Models.*;
 
 import java.beans.EventHandler;
 import java.io.IOException;
+import java.util.Optional;
 
 public class BiensController extends ListBiensFiltreController{
 
@@ -22,14 +23,14 @@ public class BiensController extends ListBiensFiltreController{
     private void ajouter(MouseEvent event) {
         Stage stage = new Stage();
         Parent root;
-        stage.setTitle("User");
+        stage.setTitle("Ajouter Bien");
         try {
             // Load root layout from fxml file.
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(Main.class.getResource("ajouterBien.fxml"));
             AnchorPane rootLayout = (AnchorPane) loader.load();
-//            Controller controller = loader.getController();
-//            controller.setImmoEsi(immoEsi);
+            ajouterBienController controller = loader.getController();
+            controller.setImmoEsi(immoEsi);
 
             // Show the scene containing the root layout.
             Scene scene = new Scene(rootLayout);
@@ -42,7 +43,31 @@ public class BiensController extends ListBiensFiltreController{
     }
     @FXML
     private void modifier(MouseEvent event) {
+        Bien bien = list_biens.getSelectionModel().getSelectedItem();
+        if (bien == null) {
+            erreurSendMessage.setText("veuillez selectionner un bien");
+            return;
+        }
+        Stage stage = new Stage();
+        Parent root;
+        stage.setTitle("Modifier Bien");
+        try {
+            // Load root layout from fxml file.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(Main.class.getResource("modifierBien.fxml"));
+            AnchorPane rootLayout = (AnchorPane) loader.load();
+            modifierBienController controller = loader.getController();
+            controller.setAncienBien(bien);
+            controller.setImmoEsi(immoEsi);
 
+            // Show the scene containing the root layout.
+            Scene scene = new Scene(rootLayout);
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
     @FXML
     private void archiver(MouseEvent event) {
@@ -51,8 +76,14 @@ public class BiensController extends ListBiensFiltreController{
             erreurSendMessage.setText("veuillez selectionner un bien");
             return;
         }
-
-        immoEsi.archiver(bien);
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Confirmation Dialog");
+        alert.setHeaderText("Etes vous sur d'archiver ce bien");
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.get() == ButtonType.OK){
+            immoEsi.archiver(bien);
+            filtreUtil();
+        }
     }
     @FXML
     private void supprimer(MouseEvent event) {
@@ -62,7 +93,16 @@ public class BiensController extends ListBiensFiltreController{
             return;
         }
 
-        immoEsi.supprimerBien(bien);
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Confirmation Dialog");
+        alert.setHeaderText("Etes vous sur de supprimer ce bien");
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.get() == ButtonType.OK){
+            immoEsi.supprimerBien(bien);
+            filtreUtil();
+        }
+
+
     }
 }
 

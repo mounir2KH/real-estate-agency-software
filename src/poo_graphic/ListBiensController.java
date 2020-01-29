@@ -23,11 +23,6 @@ public class ListBiensController extends DetailsController{
     protected TableColumn<Bien, String> bienColumn;
     @FXML
     protected Button log;
-//    @FXML
-//    private void initialize() {
-//        list_biens.setCellFactory((ListView<Bien> l) -> new BienTile());
-//    }
-
     public void setImmoEsi(Agence immoEsi) {
         this.immoEsi = immoEsi;
 

@@ -38,9 +38,14 @@
                   <Image url="@photos/Groupe%201.png" />
                </image>
             </ImageView>
-            <Text fill="WHITE" layoutX="188.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenu a IMMO ESI" textAlignment="CENTER" wrappingWidth="308.0">
+            <Text fill="WHITE" layoutX="172.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenu à" textAlignment="CENTER" wrappingWidth="159.0">
                <font>
                   <Font size="30.0" />
+               </font>
+            </Text>
+            <Text fill="#3f3d56" layoutX="334.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IMMO ESI">
+               <font>
+                  <Font name="Segoe UI" size="30.0" />
                </font>
             </Text>
          </children></Pane>
@@ -138,7 +143,7 @@
          </children>
       </GridPane>
       <Text layoutX="10.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" />
-      <ListView fx:id="list_biens" layoutX="224.0" layoutY="143.0" onMouseClicked="#reset" prefHeight="489.0" prefWidth="425.0" />
+      <ListView fx:id="list_biens" layoutX="216.0" layoutY="143.0" onMouseClicked="#reset" prefHeight="489.0" prefWidth="433.0" />
       <Button fx:id="contact" layoutX="986.0" layoutY="578.0" mnemonicParsing="false" onMouseClicked="#envoyerMessage" prefHeight="40.0" prefWidth="76.0" style="-fx-background-color: #02ac96; -fx-background-radius: 17;" text="contact" textFill="WHITE">
          <font>
             <Font size="14.0" />

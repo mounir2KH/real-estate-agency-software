@@ -50,7 +50,10 @@
                                        </font>
                                        <effect>
                                           <DropShadow height="10.0" radius="4.5" width="10.0" />
-                                       </effect></Button>
+                                       </effect>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor></Button>
                                     <Label fx:id="errorMessage" layoutX="40.0" layoutY="78.0" textFill="#f51717" />
                                  </children>
                               </AnchorPane>

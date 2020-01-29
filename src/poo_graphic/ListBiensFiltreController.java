@@ -1,5 +1,6 @@
 package poo_graphic;
 
+import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
@@ -20,7 +21,10 @@ public class ListBiensFiltreController extends ListBiensController{
     private Label filtreErreur;
 
     @FXML
-    private void filtre(MouseEvent event) {
+    private  void filtre(MouseEvent event) {
+        filtreUtil();
+    }
+    protected void filtreUtil() {
         try {
             filtreErreur.setText("");
             double superficieMinValue = 0, prixMinValue = 0, prixMaxValue = 0;
@@ -71,6 +75,7 @@ public class ListBiensFiltreController extends ListBiensController{
             list_biens.setItems(immoEsi.filtrer(transaction, wilayaValue, prixMinValue, prixMaxValue, typeBienValue, superficieMinValue, nbrpices));
         } catch (Exception error) {
             filtreErreur.setText("filtres incorrects");
+            list_biens.setItems(FXCollections.observableArrayList());
         }
 
     }

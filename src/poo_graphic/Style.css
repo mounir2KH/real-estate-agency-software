@@ -4,4 +4,20 @@
 .tab-pane .tab-header-area {
     Visibility :hidden ;
 }
+.menu-bar1:hover{
+    -fx-border-color: #660099;
+    -fx-border-width: 0px 0px 4px 0px;
+}
+.menu-bar2:hover{
+    -fx-border-color: #00ff66;
+    -fx-border-width: 0px 0px 4px 0px;
+}
+.menu-bar3:hover{
+    -fx-border-color: #d8ff0f;
+    -fx-border-width: 0px 0px 4px 0px;
+}
+.menu-bar4:hover{
+    -fx-border-color: #79140e;
+    -fx-border-width: 0px 0px 4px 0px;
+}
 

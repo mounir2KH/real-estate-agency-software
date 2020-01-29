@@ -31,17 +31,41 @@
                         <Image url="@photos/Groupe 1.png" />
                     </image>
                 </ImageView>
-                <Text fill="WHITE" layoutX="195.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User" textAlignment="CENTER" wrappingWidth="65.4580078125">
+                <Text fill="WHITE" layoutX="180.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin" textAlignment="CENTER" wrappingWidth="107.4580078125">
                     <font>
                         <Font size="30.0" />
                     </font>
                 </Text>
-            <HBox layoutX="195.0" layoutY="101.0" prefHeight="42.0" prefWidth="492.0" style="-fx-background-color: #3F3D56; -fx-background-radius: 0;">
+            <HBox layoutX="210.0" layoutY="101.0" prefHeight="42.0" prefWidth="492.0" style="-fx-background-color: Transparent; -fx-background-radius: 0; -fx-background-radius: 5;">
                <children>
-                  <Button mnemonicParsing="false" onMouseClicked="#afficherBiens" prefHeight="44.0" prefWidth="123.0" style="-fx-background-color: Transparent; -fx-border-color: white;" text="Biens" textFill="WHITE" />
-                  <Button mnemonicParsing="false" onMouseClicked="#afficherArchives" prefHeight="44.0" prefWidth="123.0" style="-fx-background-color: Transparent; -fx-border-color: white;" text="Archive" textFill="WHITE" />
-                  <Button mnemonicParsing="false" onMouseClicked="#afficherPropritaires" prefHeight="44.0" prefWidth="123.0" style="-fx-background-color: Transparent; -fx-border-color: white;" text="Proprietaires" textFill="WHITE" />
-                  <Button mnemonicParsing="false" onMouseClicked="#afficherMessages" prefHeight="44.0" prefWidth="123.0" style="-fx-background-color: Transparent; -fx-border-color: white;" text="Messages" textFill="WHITE" />
+                  <Button fx:id="Biens" mnemonicParsing="false" onMouseClicked="#afficherBiens" prefHeight="44.0" prefWidth="123.0" style="-fx-background-color: Transparent; -fx-background-radius: 5;" styleClass="menu-bar1" stylesheets="@Style.css" text="Biens" textFill="#3f3d56">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="Segoe UI Bold" size="12.0" />
+                     </font></Button>
+                  <Button fx:id="Archive" mnemonicParsing="false" onMouseClicked="#afficherArchives" prefHeight="44.0" prefWidth="123.0" style="-fx-background-color: Transparent;" styleClass="menu-bar2" stylesheets="@Style.css" text="Archive" textFill="#3f3d56">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
+                  <Button fx:id="Propretaires" mnemonicParsing="false" onMouseClicked="#afficherPropritaires" prefHeight="44.0" prefWidth="123.0" style="-fx-background-color: Transparent;" styleClass="menu-bar3" stylesheets="@Style.css" text="Proprietaires" textFill="#3f3d56">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
+                  <Button fx:id="messages" mnemonicParsing="false" onMouseClicked="#afficherMessages" prefHeight="44.0" prefWidth="123.0" style="-fx-background-color: Transparent;" styleClass="menu-bar4" stylesheets="@Style.css" text="Messages" textFill="#3f3d56">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="Segoe UI Bold" size="12.0" />
+                     </font></Button>
                </children>
             </HBox>
             </children></Pane>

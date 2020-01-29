@@ -6,6 +6,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import java.util.LinkedList;
+import java.util.List;
 
 public class Proprietaire {
     private StringProperty nom, prenom, adrMail, tel, addresse;
@@ -77,5 +78,10 @@ public class Proprietaire {
         if (!((Proprietaire) obj).getTel().equals(this.tel.getValue()))
             return false;
         return true;
+    }
+
+    @Override
+    public String toString() {
+        return  nom.getValue();
     }
 }

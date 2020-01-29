@@ -28,6 +28,7 @@ public class Main extends Application {
             GridPane rootLayout = (GridPane) loader.load();
             Controller controller = loader.getController();
             controller.setImmoEsi(immoEsi);
+            primaryStage.setTitle("Login page");
 
             // Show the scene containing the root layout.
             Scene scene = new Scene(rootLayout);

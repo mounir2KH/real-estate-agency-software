@@ -18,7 +18,7 @@
 
 <AnchorPane prefHeight="492.0" prefWidth="1073.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="poo_graphic.BiensController">
    <children>
-      <AnchorPane layoutY="2.0" prefHeight="489.0" prefWidth="217.0" style="-fx-background-color: #3F3D56;">
+      <AnchorPane layoutY="-1.0" prefHeight="492.0" prefWidth="208.0" style="-fx-background-color: #3F3D56;">
          <children>
             <TextField fx:id="prixMin" layoutX="14.0" layoutY="90.0" prefHeight="25.0" prefWidth="76.0" promptText="Prix Min" />
             <TextField fx:id="prixMax" layoutX="119.0" layoutY="90.0" prefHeight="25.0" prefWidth="76.0" promptText="Prix Max" />
@@ -112,8 +112,8 @@
          </children>
       </GridPane>
       <Text layoutX="10.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" />
-      <ListView fx:id="list_biens" layoutX="217.0" layoutY="2.0" prefHeight="489.0" prefWidth="425.0" />
-      <Button layoutX="964.0" layoutY="440.0" mnemonicParsing="false" onMouseClicked="#supprimer" prefHeight="25.0" prefWidth="87.0" style="-fx-background-color: #02ac96; -fx-background-radius: 10;" text="Supprimer" textFill="WHITE">
+      <ListView fx:id="list_biens" layoutX="207.0" layoutY="-1.0" prefHeight="492.0" prefWidth="425.0" />
+      <Button layoutX="971.0" layoutY="440.0" mnemonicParsing="false" onMouseClicked="#supprimer" prefHeight="25.0" prefWidth="87.0" style="-fx-background-color: #02ac96; -fx-background-radius: 10;" text="Supprimer" textFill="WHITE">
          <effect>
             <ColorAdjust />
          </effect>
@@ -121,7 +121,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="860.0" layoutY="440.0" mnemonicParsing="false" onMouseClicked="#archiver" prefHeight="25.0" prefWidth="87.0" style="-fx-background-color: #02ac96; -fx-background-radius: 10;" text="Archiver" textFill="WHITE">
+      <Button layoutX="867.0" layoutY="440.0" mnemonicParsing="false" onMouseClicked="#archiver" prefHeight="25.0" prefWidth="87.0" style="-fx-background-color: #02ac96; -fx-background-radius: 10;" text="Archiver" textFill="WHITE">
          <effect>
             <ColorAdjust />
          </effect>
@@ -129,7 +129,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="757.0" layoutY="440.0" mnemonicParsing="false" onMouseClicked="#modifier" prefHeight="25.0" prefWidth="87.0" style="-fx-background-color: #02ac96; -fx-background-radius: 10;" text="Modifier" textFill="WHITE">
+      <Button layoutX="759.0" layoutY="440.0" mnemonicParsing="false" onMouseClicked="#modifier" prefHeight="25.0" prefWidth="87.0" style="-fx-background-color: #02ac96; -fx-background-radius: 10;" text="Modifier" textFill="WHITE">
          <effect>
             <ColorAdjust />
          </effect>
@@ -137,7 +137,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="640.0" layoutY="440.0" mnemonicParsing="false" onMouseClicked="#ajouter" prefHeight="25.0" prefWidth="87.0" style="-fx-background-color: #02ac96; -fx-background-radius: 10;" text="Ajouter" textFill="WHITE">
+      <Button layoutX="648.0" layoutY="440.0" mnemonicParsing="false" onMouseClicked="#ajouter" prefHeight="25.0" prefWidth="87.0" style="-fx-background-color: #02ac96; -fx-background-radius: 10;" text="Ajouter" textFill="WHITE">
          <effect>
             <ColorAdjust />
          </effect>

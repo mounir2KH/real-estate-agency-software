@@ -13,12 +13,12 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="700.0" maxWidth="700.0" minHeight="621.0" minWidth="700.0" prefHeight="621.0" prefWidth="700.0" style="-fx-background-color: #02ac96;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="poo_graphic.ajouterBienController">
+<AnchorPane maxHeight="700.0" maxWidth="700.0" minHeight="621.0" minWidth="700.0" prefHeight="621.0" prefWidth="700.0" style="-fx-background-color: #02ac96;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="poo_graphic.modifierBienController">
    <children>
       <Group layoutX="53.0" layoutY="37.0" />
       <ComboBox fx:id="echange_wilaya" focusTraversable="false" layoutX="160.0" layoutY="197.0" prefHeight="25.0" prefWidth="128.0" promptText="Echange Wilaya" scaleShape="false" style="-fx-background-color: #ffffff;" visibleRowCount="48" />
       <Group layoutX="149.0" layoutY="123.0" />
-      <Button layoutX="516.0" layoutY="557.0" mnemonicParsing="false" onMouseClicked="#add" prefHeight="40.0" prefWidth="101.0" style="-fx-background-color: #3F3D56; -fx-background-radius: 9;" text="Ajouter" textFill="WHITE">
+      <Button layoutX="516.0" layoutY="557.0" mnemonicParsing="false" onMouseClicked="#add" prefHeight="40.0" prefWidth="101.0" style="-fx-background-color: #3F3D56; -fx-background-radius: 9;" text="sauvegarder" textFill="WHITE">
          <effect>
             <DropShadow height="15.07" radius="6.2925" width="12.1" />
          </effect>
@@ -36,7 +36,7 @@
       <TextArea fx:id="Description" layoutX="23.0" layoutY="483.0" prefHeight="74.0" prefWidth="281.0" wrapText="true" />
       <TextField fx:id="prixMin" layoutX="530.0" layoutY="197.0" prefHeight="25.0" prefWidth="117.0" promptText="Prix " />
       <TextField fx:id="superficies" layoutX="22.0" layoutY="286.0" prefHeight="25.0" prefWidth="97.0" promptText="Superficie" />
-      <Text fill="#3f3d56" layoutX="252.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter Bien">
+      <Text fill="#3f3d56" layoutX="252.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modifier Bien">
          <font>
             <Font size="30.0" />
          </font>
